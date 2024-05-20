@@ -1,0 +1,36 @@
+public class ejercicio2 {
+
+	public static void main(String[] args) {
+		
+		int num = 50;
+		for(int i = 50; i <= 100; i++) {
+			
+			if (num % i == 0) {
+				boolean primo = true;	
+				break;
+			}
+			
+			for(int j = 2; j <= i-1; j++) {
+			
+				if (i % j == 0) {
+					boolean primo = false;
+					break;
+				}	
+			}
+			
+			if (primo) {
+				
+				System.out.println(i + ": pirmo");
+			}
+			else {
+				System.out.prin(i + ": ");
+			}
+		
+			
+			
+			
+		}
+
+	}
+
+}
