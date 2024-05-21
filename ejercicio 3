@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ejercicio3 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		boolean encontradoPrimo = false;
+		int numero;
+		
+		while (!encontradoPrimo) {
+            System.out.print("Ingrese un número: ");
+            numero = scanner.nextInt();
+
+            if (numero > 100 && esPrimo(numero)) {
+                encontradoPrimo = true;
+                System.out.println("El número " + numero + " es primo y mayor a 100.");
+            }
+            else {
+                System.out.println("El número " + numero + " no cumple las condiciones de cierre.");
+            }
+        }
+
+        scanner.close();
+    }
+	
+	public static boolean esPrimo(int numero) {
+		
+		 if (numero <= 1) {
+			 return false;
+	        }
+	        if (numero == 2) {
+	         return true;
+	        }
+	        if (numero % 2 == 0) {
+	         return false;
+	        }
+
+	        int raiz = (int) Math.sqrt(numero);
+	        for (int i = 3; i <= raiz; i += 2) {
+	            if (numero % i == 0) {
+	                return false;
+	            }
+	        }
+
+	        return true;
+	}
+
+}
