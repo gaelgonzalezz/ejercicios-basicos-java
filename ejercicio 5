@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ejercicio5 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		double num1, num2, resultado;
+		int operacion;
+		
+		System.out.print("Ingrese el primer numero: ");
+		num1 = scanner.nextDouble();
+		
+		System.out.print("Ingrese el segundo numero: ");
+		num2 = scanner.nextDouble();
+		
+		System.out.print("Ingrese la operacion que desee realizar, (1: suma, 2: resta, 3: multiplicacion, 4: division): ");
+		operacion = scanner.nextInt();
+		
+		switch(operacion) {
+			
+		case 1:
+			resultado = num1 + num2;
+			System.out.println("El resultado de la suma es: " + resultado);
+			break;
+		
+		case 2:
+			resultado = num1 - num2;
+			System.out.println("El resultado de la resta es: " + resultado);
+			break;
+			
+		case 3:
+			resultado = num1 * num2;
+			System.out.println("El resultado de la multiplicacion es: " + resultado);
+			break;
+			
+		case 4:
+			resultado = num1 / num2;
+			System.out.println("El resultado de la division es: " + resultado);
+			break;
+		
+		default:
+			System.out.print("Operacion no valida");
+			break;
+		}
+
+	}
+
+}
