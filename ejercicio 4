@@ -1,0 +1,13 @@
+//Este ejemplo son las notas de los alumnos de una clase.
+
+public class ejercicio4 {
+
+	public static void main(String[] args) {
+		
+		int[] notasAlumnos = {3, 5, 7, 10, 9};
+		
+		for(int notas: notasAlumnos) {
+			System.out.print(notas + ", ");
+		}
+	}
+}
